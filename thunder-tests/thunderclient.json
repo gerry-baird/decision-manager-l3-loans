@@ -1,0 +1,119 @@
+[
+  {
+    "_id": "3a5fac8e-6e35-43e4-aa1a-8e222501c178",
+    "colId": "e5adb826-079a-4139-8db8-30a3a98a6fa1",
+    "containerId": "",
+    "name": "Likely Approved",
+    "url": "http://localhost:8080/kie-server/services/rest/server/containers/Loan/dmn",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-12-13T09:57:46.012Z",
+    "modified": "2022-12-13T10:09:03.204Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"dmn-context\" :\n  {\n     \"Loan rate pct\": 2.5,\n     \"Purchase price\": 120000,\n     \"Credit Score\": 701,\n     \"Down payment\": 10000,\n     \"Monthly income\": 3000\n   }\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "bamAdmin",
+        "password": "ibmpam1!"
+      }
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "\"Loan payment\": 434"
+      }
+    ]
+  },
+  {
+    "_id": "d924f9cd-c78c-47c4-9048-838e4169797c",
+    "colId": "e5adb826-079a-4139-8db8-30a3a98a6fa1",
+    "containerId": "",
+    "name": "Possibly Approved",
+    "url": "http://localhost:8080/kie-server/services/rest/server/containers/Loan/dmn",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-12-13T10:08:12.388Z",
+    "modified": "2022-12-13T10:11:10.844Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"dmn-context\" :\n  {\n     \"Loan rate pct\": 2.5,\n     \"Purchase price\": 120000,\n     \"Credit Score\": 701,\n     \"Down payment\": 10000,\n     \"Monthly income\": 2100\n   }\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "bamAdmin",
+        "password": "ibmpam1!"
+      }
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "\"Loan payment\": 434"
+      }
+    ]
+  },
+  {
+    "_id": "0bf23644-2dd8-489b-9a6d-2cb1ca1ed69b",
+    "colId": "e5adb826-079a-4139-8db8-30a3a98a6fa1",
+    "containerId": "",
+    "name": "Rejected",
+    "url": "http://localhost:8080/kie-server/services/rest/server/containers/Loan/dmn",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-12-13T10:09:58.947Z",
+    "modified": "2022-12-13T10:11:22.877Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"dmn-context\" :\n  {\n     \"Loan rate pct\": 2.5,\n     \"Purchase price\": 120000,\n     \"Credit Score\": 670,\n     \"Down payment\": 10000,\n     \"Monthly income\": 2100\n   }\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "bamAdmin",
+        "password": "ibmpam1!"
+      }
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "\"Loan payment\": 434"
+      }
+    ]
+  }
+]
