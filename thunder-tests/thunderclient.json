@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-12-13T09:57:46.012Z",
-    "modified": "2022-12-13T10:09:03.204Z",
+    "modified": "2022-12-13T14:35:37.897Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"dmn-context\" :\n  {\n     \"Loan rate pct\": 2.5,\n     \"Purchase price\": 120000,\n     \"Credit Score\": 701,\n     \"Down payment\": 10000,\n     \"Monthly income\": 3000\n   }\n}",
+      "raw": "{\n  \"dmn-context\" :\n  {\n     \"Loan rate pct\": 2.5,\n     \"Purchase price\": 120000,\n     \"Credit Score\": 721,\n     \"Down payment\": 10000,\n     \"Monthly income\": 3000\n   }\n}",
       "form": []
     },
     "auth": {
@@ -35,6 +35,12 @@
         "custom": "",
         "action": "contains",
         "value": "\"Loan payment\": 434"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "contains",
+        "value": "\"Possibly approved\""
       }
     ]
   },
@@ -86,12 +92,12 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-12-13T10:09:58.947Z",
-    "modified": "2022-12-13T10:11:22.877Z",
+    "modified": "2022-12-13T14:34:35.666Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"dmn-context\" :\n  {\n     \"Loan rate pct\": 2.5,\n     \"Purchase price\": 120000,\n     \"Credit Score\": 670,\n     \"Down payment\": 10000,\n     \"Monthly income\": 2100\n   }\n}",
+      "raw": "{\n  \"dmn-context\" :\n  {\n     \"Loan rate pct\": 2.5,\n     \"Purchase price\": 120000,\n     \"Credit Score\": 650,\n     \"Down payment\": 10000,\n     \"Monthly income\": 2100\n   }\n}",
       "form": []
     },
     "auth": {
